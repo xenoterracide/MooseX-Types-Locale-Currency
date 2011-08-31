@@ -6,11 +6,11 @@ use Test::More;
 {
     package Currency;
     use Moose;
-    use MooseX::Types::Locale::Currency qw( AlphaCurrencyCode );
+    use MooseX::Types::Locale::Currency qw( CurrencyCode );
 
     has code  => (
         is => 'ro',
-        isa => AlphaCurrencyCode,
+        isa => CurrencyCode,
     );
 
     __PACKAGE__->meta->make_immutable;
