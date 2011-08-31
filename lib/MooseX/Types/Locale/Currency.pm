@@ -25,7 +25,7 @@ coerce CurrencyCode,
 coerce CurrencyCode,
 	from Str,
 	via {
-			if ( length($_) == 3 && $_ =~ /[[:alpha:]]*/ ) {
+			if ( length($_) == 3 && $_ =~ /^[[:alpha:]]*$/xms ) {
 				lc $_;
 			}
 		}
