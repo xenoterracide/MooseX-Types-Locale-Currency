@@ -18,7 +18,7 @@ enum CurrencyCode,
 coerce CurrencyCode,
 	from Int,
 	via {
-		currency_code2code( $_, 'num', 'alpha' )
+		currency_code2code( $_, 'num', 'alpha' );
 	}
 	;
 
