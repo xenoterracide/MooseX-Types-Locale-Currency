@@ -17,8 +17,8 @@ use Test::More;
     __PACKAGE__->meta->make_immutable;
 }
 
-my $c = Currency->new({ code => 840 });
+my $a = Currency->new({ code => 840 });
 
-is( $c->code, 'USD', 'check currency code returns' );
+is( $a->code, 'USD', 'check currency code returns' );
 
 done_testing;

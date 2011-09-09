@@ -22,15 +22,6 @@ coerce CurrencyCode,
 	}
 	;
 
-coerce CurrencyCode,
-	from Str,
-	via {
-			if ( length($_) == 3 && $_ =~ /^[[:alpha:]]*$/xms ) {
-				lc $_;
-			}
-		}
-	;
-
 1;
 
 # ABSTRACT: Moose Types related to Locale Currency
