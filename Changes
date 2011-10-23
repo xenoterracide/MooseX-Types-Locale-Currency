@@ -2,6 +2,9 @@ Revision history for MooseX-Types-Locale-Currency
 
 {{$NEXT}}
 
+0.001002  2011-10-23
+	- move to decimal versions
+
 v0.1.1    2011-09-09
 	- document and test coercion
 
