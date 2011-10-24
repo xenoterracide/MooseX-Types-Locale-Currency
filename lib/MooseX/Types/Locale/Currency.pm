@@ -9,7 +9,7 @@ use MooseX::Types -declare => [ qw( CurrencyCode ) ];
 use MooseX::Types::Moose qw( Str Int );
 use namespace::autoclean;
 
-use Locale::Currency;
+use Locale::Currency 3;
 
 enum CurrencyCode,
 	[ all_currency_codes ]
