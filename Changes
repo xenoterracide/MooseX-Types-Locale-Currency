@@ -2,6 +2,9 @@ Revision history for MooseX-Types-Locale-Currency
 
 {{$NEXT}}
 
+0.001003  2011-10-24
+	- require version 3 of Locale::Currency
+
 0.001002  2011-10-23
 	- move to decimal versions
 
