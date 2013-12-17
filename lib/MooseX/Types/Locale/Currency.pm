@@ -7,18 +7,17 @@ use warnings;
 
 use MooseX::Types -declare => [ qw( CurrencyCode ) ];
 use MooseX::Types::Moose qw( Str Int );
-use Class::Load 0.20 qw( load_class );
-use namespace::autoclean;
+use Module::Runtime 'use_module';
 
 enum CurrencyCode, [
-	load_class('Locale::Currency')
+	use_module('Locale::Currency', 3 )
 	&& Locale::Currency::all_currency_codes()
 ];
 
 coerce CurrencyCode,
 	from Int,
 	via {
-		load_class('Locale::Currency');
+		use_module('Locale::Currency', 3 );
 		Locale::Currency::currency_code2code( $_, 'num', 'alpha' );
 	}
 	;
